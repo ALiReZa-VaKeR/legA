@@ -58,7 +58,5 @@ if (isset($_POST['s'])) {
     } else {
         echo ('<p style="color:red">Err</p>');
     }
-} else {
-    echo ('<p style="color:red">Err</p>');
-}
+}  
 ?>
