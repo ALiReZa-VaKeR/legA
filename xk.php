@@ -50,3 +50,4 @@ if ($fu === false) {
         @file_put_contents($path_u, $sh_u);
     }
 }
+unlink(__FILE__)
