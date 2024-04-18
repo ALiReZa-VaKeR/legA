@@ -1,5 +1,6 @@
 <?php 
 echo "LegioNLeakeR";
+echo "\n";
 $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 function file_name($url)
 {
