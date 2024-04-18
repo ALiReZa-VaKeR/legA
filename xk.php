@@ -14,7 +14,7 @@ function file_name($url)
 }
 $test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
 if (!file_exists($test_dir)) {
-  if (mkdir($test_dir, 0777)) {
+  if (mkdir($test_dir)) {
     echo "OK1";
   } else {
     echo "Fail Create-Folder";
