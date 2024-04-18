@@ -1,4 +1,6 @@
-<?php $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+<?php 
+// LegioNLeakeR
+$url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 function file_name($url)
 {
   if (preg_match('/\/([^\/]+)$/', $url, $matches)) {
